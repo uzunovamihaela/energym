@@ -1,0 +1,108 @@
+/* =============================================================
+   ENERGYM — Location Section
+   Both columns stretch to the same height automatically.
+   ============================================================= */
+
+.location {
+  padding-block: var(--sp-xl);
+  background: var(--clr-surface);
+}
+
+/* ---- Two-column grid — align-items: stretch so heights match ---- */
+.location-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: stretch;         /* ← both columns fill the same row height */
+}
+
+/* ---- Info card: full height flex column ---- */
+.location-card {
+  background: var(--clr-surface-alt);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;       /* photo on top, body below */
+  height: 100%;                 /* stretch to match map column */
+  transition: border-color var(--dur-mid);
+}
+.location-card:hover {
+  border-color: var(--clr-border-hover);
+}
+
+/* Photo scales up to fill available space above the body */
+.location-card-photo {
+  width: 100%;
+  flex: 1;                      /* grows to fill leftover height */
+  min-height: 200px;            /* never collapse to 0 */
+  background-image: url('https://framerusercontent.com/images/kPCbrKvvhydR5zEXUfk5vhxtG4.jpg');
+  /* Replace with: url('../assets/images/location.jpg') */
+  background-size: cover;
+  background-position: center;
+}
+
+/* Body stays fixed-height at the bottom of the card */
+.location-card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.location-city {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 0.06em;
+}
+
+/* ---- Contact detail rows ---- */
+.location-detail {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  color: var(--clr-text-muted);
+  line-height: 1.5;
+}
+.location-detail a:hover {
+  color: var(--clr-primary);
+  transition: color var(--dur-fast);
+}
+.location-detail-icon {
+  width: 15px;
+  height: 15px;
+  fill: var(--clr-primary);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ---- Map column: fills its grid cell completely ---- */
+.location-map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--clr-border);
+  height: 100%;                 /* stretch to match card column */
+  min-height: 420px;            /* floor so map is always usable */
+}
+.location-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+  filter: grayscale(45%) contrast(1.1) brightness(0.85);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .location-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    /* On mobile, let each item size naturally */
+    align-items: start;
+  }
+  .location-card  { height: auto; }
+  .location-map   { height: 320px; min-height: 0; }
+  .location-card-photo { flex: none; aspect-ratio: 3 / 2; }
+}

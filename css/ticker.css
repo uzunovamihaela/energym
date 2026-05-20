@@ -1,0 +1,99 @@
+/* =============================================================
+   ENERGYM — Crossed Ticker Strips
+   Replicates the two diagonal overlapping marquee bands from
+   the Framer site. One strip tilts up-right (white), the other
+   down-right (teal). They cross in the centre of the viewport.
+   ============================================================= */
+
+.ticker-section {
+  position: relative;
+  height: 220px;          /* visible window for the crossed bands */
+  overflow: hidden;
+  background: var(--clr-bg);
+  z-index: 1;
+}
+
+/* ---- Shared strip base ---- */
+.ticker-strip {
+  position: absolute;
+  left: -0%;
+  width: 120%;           /* wider than viewport so diagonals don't gap */
+  padding-block: 1rem;
+  display: flex;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* ---- Top strip: white background, tilts up-right ---- */
+.ticker-strip--white {
+  background: #f0f0f0;
+  top: 28px;
+  transform: rotate(-5deg);
+  transform-origin: center center;
+  z-index: 2;
+  margin-top: 16px;
+}
+
+/* ---- Bottom strip: teal background, tilts down-right ---- */
+.ticker-strip--teal {
+  background: var(--clr-primary);
+  top: 90px;
+  transform: rotate(5deg);
+  transform-origin: center center;
+  z-index: 3;
+  opacity: 0.9;
+}
+
+/* ---- Scrolling track (duplicated for seamless loop) ---- */
+.ticker-track {
+  display: flex;
+  gap: 0;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+/* Separate animation speeds so strips feel independent */
+.ticker-strip--white .ticker-track {
+  animation: ticker-scroll 32s linear infinite;
+}
+.ticker-strip--teal .ticker-track {
+  animation: ticker-scroll 24s linear infinite reverse;
+}
+
+/* ---- Individual word items ---- */
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  letter-spacing: 0.12em;
+  padding-inline: 2rem;
+  font-weight: 800;
+}
+
+.ticker-strip--white .ticker-item {
+  color: #0d0d0d;
+}
+.ticker-strip--teal .ticker-item {
+  color: #0d0d0d;
+}
+
+/* ---- Bullet dot separator ---- */
+.ticker-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0.35;
+  margin-left: 2rem;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* ---- Keyframes ---- */
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

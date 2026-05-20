@@ -1,0 +1,180 @@
+/* =============================================================
+   ENERGYM — Navigation / Header
+   Two-row layout matching screenshot:
+     Row 1 (top bar)  — centred hours · phone · email
+     Row 2 (main nav) — logo on left, links on right with wide spacing
+   ============================================================= */
+
+/* ---- Site header wrapper ---- */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  transition:
+    background      var(--dur-mid),
+    backdrop-filter var(--dur-mid),
+    border-color    var(--dur-mid);
+}
+.site-header.scrolled {
+  background: rgba(13, 13, 13, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--clr-border);
+}
+
+/* ---- Row 1: info bar ---- */
+.nav-topbar {
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  padding-block: 0.65rem;
+}
+.nav-topbar-inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--sp-md);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;   /* centred like in screenshot */
+  gap: 3rem;
+  font-size: 1rem;
+  color: var(--clr-text-muted);
+}
+.nav-topbar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.nav-topbar-item svg {
+  width: 13px;
+  height: 13px;
+  fill: var(--clr-primary);
+  flex-shrink: 0;
+}
+.nav-topbar-item a:hover {
+  color: var(--clr-primary);
+  transition: color var(--dur-fast);
+}
+
+/* ---- Row 2: main nav row ---- */
+.nav-inner {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--sp-md);
+  padding-block: 1.1rem;          /* more vertical breathing room */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--sp-md);
+}
+
+/* ---- Logo image ---- */
+.nav-logo-img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+/* ---- Desktop nav links — extra wide gap like screenshot ---- */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;                    /* generous spacing between links */
+}
+.nav-links a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-text-muted);
+  letter-spacing: 0.06em;
+  position: relative;
+  transition: color var(--dur-fast);
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--clr-primary);
+  transition: width var(--dur-mid) var(--ease-out);
+}
+.nav-links a:hover        { color: var(--clr-text); }
+.nav-links a:hover::after { width: 100%; }
+
+/* ---- Hamburger button (mobile only) ---- */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 34px;
+  height: 34px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+.nav-toggle span {
+  display: block;
+  height: 1.5px;
+  background: var(--clr-text);
+  border-radius: 2px;
+  transition:
+    transform var(--dur-mid) var(--ease-out),
+    opacity   var(--dur-fast);
+}
+.nav-toggle.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ---- Mobile full-screen overlay menu ---- */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 13, 13, 0.97);
+  z-index: 190;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur-mid) var(--ease-out);
+}
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.mobile-menu a {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  letter-spacing: 0.08em;
+  color: var(--clr-text);
+  transition: color var(--dur-fast);
+}
+.mobile-menu a:hover { color: var(--clr-primary); }
+.mobile-menu .mobile-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: var(--clr-text-muted);
+  cursor: pointer;
+  transition: color var(--dur-fast);
+}
+.mobile-menu .mobile-close:hover { color: var(--clr-primary); }
+
+/* ---- Responsive breakpoints ---- */
+@media (max-width: 900px) {
+  .nav-topbar  { display: none; }
+  .nav-links   { display: none; }
+  .nav-toggle  { display: flex; }
+  .mobile-menu { display: flex; }
+}

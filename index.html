@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Energym – feel the change</title>
+  <meta name="description" content="Energym е фитнес центърът за всеки, който иска да подобри формата си в модерна, добре оборудвана и подкрепяща среда." />
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Energym – feel the change" />
+  <meta property="og:description" content="Energym е фитнес център в град Хасково." />
+  <meta property="og:type"        content="website" />
+  <meta property="og:image"       content="assets/images/gym person background.avif" />
+
+  <!-- Favicon (teal version for browser tab) -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets (load order matters) -->
+  <link rel="stylesheet" href="css/tokens.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/ticker.css" />
+  <link rel="stylesheet" href="css/facilities.css" />
+  <link rel="stylesheet" href="css/location.css" />
+  <link rel="stylesheet" href="css/pricing.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION HEADER
+       ============================================================ -->
+  <header class="site-header" id="site-header">
+
+    <!-- Row 1: info top bar -->
+    <div class="nav-topbar">
+      <div class="nav-topbar-inner">
+
+        <!-- Hours -->
+        <div class="nav-topbar-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
+          </svg>
+          <span>08:00ч. – 22:00ч. (Понеделник – Петък),&nbsp; 10:00ч. – 20:00ч. (Събота – Неделя)</span>
+        </div>
+
+        <!-- Phone -->
+        <div class="nav-topbar-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          <a href="tel:+359885232670">+359 88 523 2670</a>
+        </div>
+
+        <!-- Email -->
+        <div class="nav-topbar-item">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+          <a href="mailto:contact@energym.bg">contact</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Row 2: logo + nav links -->
+    <nav class="nav-inner" aria-label="Main navigation">
+
+      <!-- Logo -->
+      <a href="#" aria-label="Energym home">
+        <img
+          src="assets/icons/logo.svg"
+          alt="Energym logo"
+          class="nav-logo-img"
+        />
+      </a>
+
+      <!-- Desktop links (wide spacing) -->
+      <ul class="nav-links" role="list">
+        <li><a href="#hero">Начало</a></li>
+        <li><a href="#gallery">Галерия</a></li>
+        <li><a href="#contact">Контакти</a></li>
+      </ul>
+
+      <!-- Hamburger (mobile only) -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+  </header>
+
+  <!-- Mobile overlay menu -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+    <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+    <a href="#hero">Начало</a>
+    <a href="#gallery">Галерия</a>
+    <a href="#contact">Контакти</a>
+  </nav>
+
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero" id="hero" aria-label="Hero">
+
+    <!-- Rotating background images -->
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-bg-slide active"></div>
+      <div class="hero-bg-slide"></div>
+      <div class="hero-bg-slide"></div>
+    </div>
+
+    <!-- Dark gradient overlay -->
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <!-- Text content -->
+    <div class="hero-content">
+      <h1 class="hero-title reveal">
+        Трансформирай<br />
+        тялото и ума<br />
+        си в <span class="highlight">energym</span>
+      </h1>
+
+      <p class="hero-subtitle reveal reveal-d1">
+        Energym в Хасково е фитнес центърът за всеки, който иска да подобри
+        формата си в модерна, добре оборудвана и подкрепяща среда.
+      </p>
+
+       <!-- Hero actions invisible for
+        <div class="hero-actions reveal reveal-d2">
+        <a href="#pricing" class="btn btn-primary">Виж цените</a>
+        <a href="#about"   class="btn btn-outline">Научи повече</a>
+      </div>
+      -->
+     
+
+      <div class="hero-social reveal reveal-d3">
+        <span>Последвай ни :</span>
+
+        <a href="https://www.instagram.com/energym_haskovo/"
+           class="hero-social-link"
+           target="_blank" rel="noopener"
+           aria-label="Instagram">
+          <!-- Instagram icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          Instagram
+        </a>
+
+        <a href="https://www.facebook.com/profile.php?id=100078097128902"
+           class="hero-social-link"
+           target="_blank" rel="noopener"
+           aria-label="Facebook">
+          <!-- Facebook icon -->
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          Facebook
+        </a>
+      </div>
+    </div>
+
+    <!-- Slide indicator dots -->
+    <div class="hero-dots" aria-label="Slide indicators">
+      <button class="hero-dot active" data-index="0" aria-label="Slide 1"></button>
+      <button class="hero-dot"        data-index="1" aria-label="Slide 2"></button>
+      <button class="hero-dot"        data-index="2" aria-label="Slide 3"></button>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       CROSSED TICKER STRIPS
+       Two diagonal marquee bands (white + teal) crossing in X.
+       ============================================================ -->
+  <div class="ticker-section" aria-hidden="true">
+
+    <!-- White strip — tilts up-right, scrolls right -->
+    <div class="ticker-strip ticker-strip--white">
+      <div class="ticker-track">
+        <!-- Items duplicated so the loop is seamless at -50% -->
+        <span class="ticker-item">ТРАНСФОРМИРАЙ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">ПОСТИГАЙ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">ПРЕЗАРЕДИ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">ТРЕНИРАЙ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">РЕЛАКСИРАЙ<span class="ticker-dot"></span></span>
+        <!-- duplicate -->
+        <span class="ticker-item">ТРАНСФОРМИРАЙ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">ПОСТИГАЙ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">ПРЕЗАРЕДИ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">ТРЕНИРАЙ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">РЕЛАКСИРАЙ<span class="ticker-dot"></span></span>
+      </div>
+    </div>
+
+    <!-- Teal strip — tilts down-right, scrolls left (reverse) -->
+    <div class="ticker-strip ticker-strip--teal">
+      <div class="ticker-track">
+        <span class="ticker-item">ПОСТИГАЙ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">ПРЕЗАРЕДИ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">ТРЕНИРАЙ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">РЕЛАКСИРАЙ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">ТРАНСФОРМИРАЙ<span class="ticker-dot"></span></span>
+        <!-- duplicate -->
+        <span class="ticker-item">ПОСТИГАЙ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">ПРЕЗАРЕДИ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">ТРЕНИРАЙ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">РЕЛАКСИРАЙ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">ТРАНСФОРМИРАЙ<span class="ticker-dot"></span></span>
+        <!-- duplicate -->
+        <span class="ticker-item">ПОСТИГАЙ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">ПРЕЗАРЕДИ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">ТРЕНИРАЙ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">РЕЛАКСИРАЙ<span class="ticker-dot"></span></span>
+        <span class="ticker-item">ТРАНСФОРМИРАЙ<span class="ticker-dot"></span></span>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ============================================================
+       FACILITIES / ABOUT
+       ============================================================ -->
+  <section class="facilities section" id="about" aria-label="Facilities">
+    <div class="container">
+      <div class="facilities-layout">
+
+        <!-- Text column -->
+        <div class="facilities-text">
+          <span class="section-label reveal">Нашите съоръжения</span>
+          <h2 class="section-title reveal reveal-d1">Нашият фитнес предлага</h2>
+
+          <ul class="facilities-features">
+
+            <!-- Feature 1: Equipment -->
+            <li class="facility-feature reveal reveal-d2">
+              <div class="facility-icon" aria-hidden="true">
+                <!-- Stationary bike / gym equipment icon -->
+                <svg viewBox="0 0 30 27" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M 7.182 22.92 C 7.182 23.196 7.099 23.465 6.945 23.694 C 6.79 23.923 6.571 24.101 6.314 24.206 C 6.057 24.312 5.774 24.339 5.501 24.286 C 5.229 24.232 4.978 24.099 4.781 23.905 C 4.585 23.71 4.451 23.462 4.396 23.192 C 4.342 22.922 4.37 22.642 4.476 22.387 C 4.583 22.133 4.763 21.916 4.994 21.763 C 5.226 21.61 5.498 21.528 5.776 21.528 C 6.149 21.528 6.506 21.675 6.77 21.936 C 7.034 22.197 7.182 22.551 7.182 22.92 Z M 9.271 18.096 C 8.993 18.096 8.721 18.178 8.49 18.331 C 8.259 18.484 8.078 18.701 7.972 18.955 C 7.866 19.21 7.838 19.49 7.892 19.76 C 7.946 20.03 8.08 20.278 8.277 20.473 C 8.474 20.667 8.724 20.8 8.997 20.854 C 9.27 20.907 9.552 20.88 9.809 20.774 C 10.066 20.669 10.286 20.491 10.44 20.262 C 10.595 20.033 10.677 19.764 10.677 19.488 C 10.677 19.119 10.529 18.765 10.266 18.504 C 10.002 18.243 9.644 18.096 9.271 18.096 Z M 2.28 18.096 C 2.002 18.096 1.73 18.178 1.499 18.331 C 1.268 18.484 1.087 18.701 0.981 18.955 C 0.874 19.21 0.847 19.49 0.901 19.76 C 0.955 20.03 1.089 20.278 1.286 20.473 C 1.482 20.667 1.733 20.8 2.006 20.854 C 2.279 20.907 2.561 20.88 2.818 20.774 C 3.075 20.669 3.295 20.491 3.449 20.262 C 3.604 20.033 3.686 19.764 3.686 19.488 C 3.686 19.119 3.538 18.765 3.274 18.504 C 3.011 18.243 2.653 18.096 2.28 18.096 Z M 5.776 14.664 C 5.498 14.664 5.226 14.746 4.994 14.899 C 4.763 15.052 4.583 15.269 4.476 15.523 C 4.37 15.778 4.342 16.058 4.396 16.328 C 4.451 16.598 4.585 16.846 4.781 17.041 C 4.978 17.235 5.229 17.368 5.501 17.422 C 5.774 17.475 6.057 17.448 6.314 17.342 C 6.571 17.237 6.79 17.059 6.945 16.83 C 7.099 16.601 7.182 16.332 7.182 16.056 C 7.182 15.687 7.034 15.333 6.77 15.072 C 6.506 14.811 6.149 14.664 5.776 14.664 Z M 29.682 1.864 C 29.682 2.11 29.583 2.346 29.407 2.52 C 29.231 2.694 28.993 2.792 28.744 2.792 L 25.382 2.792 L 22.118 6.024 L 19.58 20.734 C 19.523 21.07 19.374 21.384 19.148 21.642 C 18.923 21.899 18.63 22.09 18.302 22.194 C 17.974 22.298 17.624 22.31 17.289 22.23 C 16.955 22.15 16.649 21.98 16.406 21.739 L 4.921 10.369 C 4.677 10.128 4.506 9.825 4.424 9.493 C 4.343 9.162 4.356 8.814 4.461 8.49 C 4.567 8.165 4.76 7.875 5.021 7.652 C 5.282 7.429 5.6 7.281 5.94 7.225 L 20.792 4.711 L 24.057 1.48 C 24.23 1.307 24.437 1.17 24.664 1.076 C 24.892 0.983 25.136 0.935 25.382 0.936 L 28.744 0.936 C 28.993 0.936 29.231 1.034 29.407 1.208 C 29.583 1.382 29.682 1.618 29.682 1.864 Z M 19.97 6.276 L 6.117 8.621 L 17.602 19.99 Z" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="facility-feature-text">
+                Съоръжения и пространство проектирани да бъдат приветливи и удобни за теб!
+              </div>
+            </li>
+
+            <!-- Feature 2: Showers / changing rooms -->
+            <li class="facility-feature reveal reveal-d3">
+              <div class="facility-icon" aria-hidden="true">
+                <!-- Shower icon -->
+                <svg viewBox="0 0 36 28" xmlns="http://www.w3.org/2000/svg">
+                  <g transform="translate(0 11.818)">
+                    <path d="M 3.687 9.384 C 2.928 9.384 2.313 9.384 2.313 9.384 L 2.313 0 C 2.313 0 2.928 0 3.687 0 L 3.687 0 C 4.445 0 5.06 0 5.06 0 L 5.06 9.384 C 5.06 9.384 4.445 9.384 3.687 9.384 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+                    <path d="M 20.602 9.384 C 21.361 9.384 21.976 9.384 21.976 9.384 L 21.976 0 C 21.976 0 21.361 0 20.602 0 L 20.602 0 C 19.844 0 19.229 0 19.229 0 L 19.229 9.384 C 19.229 9.384 19.844 9.384 20.602 9.384 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+                    <path d="M 1.157 7.195 C 0.518 7.195 0 7.195 0 7.195 L 0 2.351 C 0 2.351 0.518 2.351 1.157 2.351 L 1.157 2.351 C 1.795 2.351 2.313 2.351 2.313 2.351 L 2.313 7.195 C 2.313 7.195 1.795 7.195 1.157 7.195 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+                    <path d="M 23.133 7.195 C 23.771 7.195 24.289 7.195 24.289 7.195 L 24.289 2.351 C 24.289 2.351 23.771 2.351 23.133 2.351 L 23.133 2.351 C 22.494 2.351 21.976 2.351 21.976 2.351 L 21.976 7.195 C 21.976 7.195 22.494 7.195 23.133 7.195 Z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+                    <path d="M 5.06 3.37 L 19.229 3.37" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+                    <path d="M 5.06 6.349 L 19.229 6.349" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+                  </g>
+                  <path d="M 8.96 12.446 C 7.923 8.108 8.311 4.651 11.552 2.482 C 14.274 0.787 18.292 1.6 21.208 4.312 C 23.93 1.329 29.504 0.38 32.161 3.363 C 34.818 6.345 36.244 10.819 30.217 18.885 C 27.102 23.053 22.245 25.935 21.208 26.545 C 18.422 25.053 14.598 21.325 13.431 19.902" fill="none" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"/>
+                </svg>
+              </div>
+              <div class="facility-feature-text">
+                Чисти, просторни съблекални и душове за комфортна среда.
+              </div>
+            </li>
+
+            <!-- Feature 3: Staff / personal support -->
+            <li class="facility-feature reveal reveal-d4">
+              <div class="facility-icon" aria-hidden="true">
+                <!-- Dumbbell + heart icon -->
+                <svg viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="facility-feature-text">
+                Персонал, който ще ти помогне и подкрепя за да постигнеш отлични резултати.
+              </div>
+            </li>
+
+          </ul>
+
+        <a href="#contact" class="btn btn-primary reveal reveal-d4">Свържи се с нас</a>
+        </div>
+
+        <!-- Gallery carousel column -->
+        <div id="gallery" aria-label="Gallery">
+          <div class="gallery-carousel reveal reveal-d1">
+            <div class="gallery-track" id="gallery-track">
+              <div class="gallery-slide" aria-label="Gym photo 1"></div>
+              <div class="gallery-slide" aria-label="Gym photo 2"></div>
+              <div class="gallery-slide" aria-label="Gym photo 3"></div>
+            </div>
+            <button class="gallery-btn gallery-btn-prev" id="gallery-prev" aria-label="Previous photo">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="gallery-btn gallery-btn-next" id="gallery-next" aria-label="Next photo">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+          </div>
+
+          <!-- Gallery dots -->
+          <div class="gallery-dots" aria-label="Gallery slide indicators">
+            <button class="gallery-dot active" data-index="0" aria-label="Photo 1"></button>
+            <button class="gallery-dot"        data-index="1" aria-label="Photo 2"></button>
+            <button class="gallery-dot"        data-index="2" aria-label="Photo 3"></button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       LOCATION
+       ============================================================ -->
+  <section class="location section" id="location" aria-label="Location">
+    <div class="container">
+      <span class="section-label reveal">Намери ни</span>
+      <h2 class="section-title reveal reveal-d1" style="margin-bottom:3rem;">
+        Къде да ни намерите
+      </h2>
+
+      <div class="location-layout">
+
+        <!-- Info card -->
+        <div class="location-card reveal reveal-d2">
+          <div class="location-card-photo" aria-hidden="true"></div>
+          <div class="location-card-body">
+            <div class="location-city">Хасково</div>
+
+            <!-- Phone -->
+            <div class="location-detail">
+              <svg class="location-detail-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+              </svg>
+              <a href="tel:+359885232670">+359 88 523 2670</a>
+            </div>
+
+            <!-- Address -->
+            <div class="location-detail">
+              <svg class="location-detail-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              <span>бул. „Г. С. Раковски" 9Б, Хасково 6300</span>
+            </div>
+
+            <!-- Hours -->
+            <div class="location-detail">
+              <svg class="location-detail-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
+              </svg>
+              <div>
+                <div>08:00 – 22:00 (Понеделник – Петък)</div>
+                <div>10:00 – 20:00 (Събота – Неделя)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Google Map -->
+        <div class="location-map reveal reveal-d3">
+          <iframe
+            src="https://maps.google.com/maps?q=bul.+G.S.Rakovski+11a+Haskovo+Bulgaria&z=15&output=embed"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Energym location map"
+          ></iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       PRICING
+       ============================================================ -->
+  <section class="pricing section" id="pricing" aria-label="Pricing">
+    <div class="container">
+
+      <div class="pricing-header">
+        <span class="section-label reveal">Абонаменти</span>
+        <h2 class="section-title reveal reveal-d1">Цени</h2>
+      </div>
+
+      <div class="pricing-grid">
+
+        <!-- ---- Gym plan ---- -->
+        <div class="pricing-card reveal">
+          <div class="pricing-badge">Gym</div>
+          <div class="pricing-price">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">24</span>
+            <span class="pricing-period">/месец</span>
+          </div>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li class="pricing-feature">
+              <span class="pricing-check" aria-hidden="true">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Ползване на фитнес уредите
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" aria-hidden="true">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Парна баня
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" aria-hidden="true">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Душ кабини
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" aria-hidden="true">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Шкафче
+            </li>
+          </ul>
+          <a href="https://stripe.com/" class="btn btn-outline" target="_blank" rel="noopener">
+            Избери план
+          </a>
+        </div>
+
+        <!-- ---- Full services plan (featured) ---- -->
+        <div class="pricing-card featured reveal reveal-d1">
+          <div class="pricing-badge">Пълни услуги</div>
+          <div class="pricing-price">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">48</span>
+            <span class="pricing-period">/месец</span>
+          </div>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li class="pricing-feature">
+              <span class="pricing-check" aria-hidden="true">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Ползване на фитнес уредите
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" aria-hidden="true">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Ползване на басейна
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" aria-hidden="true">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Group-X класове
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" aria-hidden="true">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Йога класове
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" aria-hidden="true">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Парна баня
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" aria-hidden="true">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Душ кабини
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" aria-hidden="true">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Шкафче
+            </li>
+          </ul>
+          <a href="https://stripe.com/" class="btn btn-primary" target="_blank" rel="noopener">
+            Избери план
+          </a>
+        </div>
+
+        <!-- ---- Personal trainer plan ---- -->
+        <div class="pricing-card reveal reveal-d2">
+          <div class="pricing-badge">Личен треньор</div>
+          <div class="pricing-price">
+            <span class="pricing-currency">€</span>
+            <span class="pricing-amount">20+</span>
+            <span class="pricing-period">/сесия</span>
+          </div>
+          <div class="pricing-divider"></div>
+          <ul class="pricing-features">
+            <li class="pricing-feature">
+              <span class="pricing-check" aria-hidden="true">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Персонализирани упражнения
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" aria-hidden="true">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Ползване на басейна
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" aria-hidden="true">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Парна баня
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" aria-hidden="true">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Душ кабини
+            </li>
+            <li class="pricing-feature">
+              <span class="pricing-check" aria-hidden="true">
+                <svg viewBox="0 0 12 12"><polyline points="2 6 5 9 10 3"/></svg>
+              </span>
+              Шкафче
+            </li>
+          </ul>
+          <a href="https://calendly.com/hello-truonghuy/personal-trainer-at-strongx"
+             class="btn btn-outline"
+             target="_blank" rel="noopener">
+            Запази час
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer" id="contact" aria-label="Site footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <img src="assets/icons/logo.svg" alt="Energym logo" class="footer-logo" />
+          <p class="footer-tagline">
+            Ние сме един от водещите фитнеси в Хасково. Елате и почувствайте разликата.
+          </p>
+        </div>
+
+        <!-- Support links -->
+        <div>
+          <div class="footer-col-title">Общи</div>
+          <ul class="footer-links">
+            <li><a href="#">Условия за ползване</a></li>
+            <li><a href="#">Политика за поверителност</a></li>
+            <li><a href="#">Политика за връщане</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact details -->
+        <div>
+          <div class="footer-col-title">Контакти</div>
+          <ul class="footer-links">
+            <li><a href="tel:+359885232670">+359 88 523 2670</a></li>
+            <li><a href="mailto:contact@energym.bg">contact@energym.bg</a></li>
+            <li>
+              <a href="https://maps.google.com/?q=Haskovo+Rakovski+9B"
+                 target="_blank" rel="noopener">
+                бул. „Г. С. Раковски" 9Б, Хасково 6300
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Social media -->
+        <div>
+          <div class="footer-col-title">Социални медии</div>
+          <div class="footer-social-row">
+
+            <a href="https://www.instagram.com/energym_haskovo/"
+               class="footer-social-btn"
+               target="_blank" rel="noopener"
+               aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=100078097128902"
+               class="footer-social-btn"
+               target="_blank" rel="noopener"
+               aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+            </a>
+
+          </div>
+        </div>
+
+      </div><!-- /footer-grid -->
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">© Copyright 2026. All rights reserved – Energym Хасково</p>
+        <nav class="footer-legal" aria-label="Legal links">
+          <a href="#">Условия за ползване</a>
+          <a href="#">Поверителност</a>
+          <a href="#">Връщане</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       SCRIPTS (deferred, in dependency order)
+       ============================================================ -->
+  <script src="js/nav.js"           defer></script>
+  <script src="js/hero.js"          defer></script>
+  <script src="js/gallery.js"       defer></script>
+  <script src="js/scroll-reveal.js" defer></script>
+
+</body>
+</html>

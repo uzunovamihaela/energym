@@ -1,0 +1,168 @@
+/* =============================================================
+   ENERGYM — Facilities / About Section
+   ============================================================= */
+
+.facilities {
+  padding-block: var(--sp-xl);
+}
+
+/* ---- Two-column layout ---- */
+.facilities-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* ---- Text side ---- */
+.facilities-text .section-title {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin-bottom: 2.5rem;
+}
+
+/* ---- Feature list: 3 icon rows ---- */
+.facilities-features {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;          /* breathing room between rows, matching screenshot */
+  margin-bottom: 2.5rem;
+}
+
+/* Each row: icon box on the left, text on the right */
+.facility-feature {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Teal-outlined square icon box — matches screenshot style */
+.facility-icon {
+  flex-shrink: 0;
+  width: 68px;
+  height: 68px;
+  border-radius: var(--radius);
+  background: rgba(42, 209, 209, 0.07);
+  border: 1.5px solid rgba(42, 209, 209, 0.40);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-primary);
+  transition:
+    background   var(--dur-mid),
+    border-color var(--dur-mid);
+}
+.facility-feature:hover .facility-icon {
+  background: rgba(42, 209, 209, 0.14);
+  border-color: var(--clr-primary);
+}
+.facility-icon svg {
+  width: 30px;
+  height: 30px;
+}
+
+/* Text beside the icon */
+.facility-feature-text {
+  font-size: 1rem;
+  color: var(--clr-text-soft);
+  line-height: 1.6;
+}
+
+/* ---- Gallery carousel ---- */
+.gallery-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+}
+.gallery-track {
+  display: flex;
+  transition: transform 0.55s var(--ease-out);
+}
+.gallery-slide {
+  min-width: 100%;
+  aspect-ratio: 3 / 4;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+.gallery-slide:nth-child(1) {
+  background-image: url('https://framerusercontent.com/images/imcVa9gFIQIkK0mpX6resYrD0.jpg');
+}
+.gallery-slide:nth-child(2) {
+  background-image: url('https://framerusercontent.com/images/4ImcSU60M7zOXLLQpVuWPXVw5dY.jpg');
+}
+.gallery-slide:nth-child(3) {
+  background-image: url('https://framerusercontent.com/images/Cs6ChWquCLMlZaReZ0uIVclyI.jpg');
+}
+/* ---- Replace with local images:
+   background-image: url('../assets/images/facility-1.jpg'); ---- */
+
+/* ---- Prev / Next buttons ---- */
+.gallery-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(13, 13, 13, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--clr-border);
+  color: var(--clr-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition:
+    background   var(--dur-fast),
+    border-color var(--dur-fast),
+    color        var(--dur-fast);
+}
+.gallery-btn:hover {
+  background: var(--clr-primary);
+  color: #0d0d0d;
+  border-color: var(--clr-primary);
+}
+.gallery-btn svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.gallery-btn-prev { left: 1rem; }
+.gallery-btn-next { right: 1rem; }
+
+/* ---- Slide dots under carousel ---- */
+.gallery-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.gallery-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--clr-border);
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: background var(--dur-fast), transform var(--dur-fast);
+}
+.gallery-dot.active {
+  background: var(--clr-primary);
+  transform: scale(1.35);
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .facilities-layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

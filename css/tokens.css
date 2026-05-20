@@ -1,0 +1,44 @@
+/* =============================================================
+   ENERGYM — Design Tokens
+   Edit this file to change colours, fonts, spacing globally.
+   ============================================================= */
+
+:root {
+  /* ---- Colours ---- */
+  --clr-bg:           #0d0d0d;
+  --clr-surface:      #141414;
+  --clr-surface-alt:  #1a1a1a;
+  --clr-border:       rgba(255, 255, 255, 0.08);
+  --clr-border-hover: rgba(42, 209, 209, 0.35);
+
+  --clr-primary:      #2ad1d1;   /* teal */
+  --clr-primary-dim:  rgba(42, 209, 209, 0.65);
+  --clr-primary-bg:   rgba(42, 209, 209, 0.1);
+  --clr-accent:       #dec912;   /* yellow */
+
+  --clr-text:         #f0f0f0;
+  --clr-text-muted:   rgba(240, 240, 240, 0.50);
+  --clr-text-soft:    rgba(240, 240, 240, 0.70);
+
+  /* ---- Typography ---- */
+  --font-display: 'Bebas Neue', sans-serif;
+  --font-body:    'DM Sans', sans-serif;
+
+  /* ---- Spacing ---- */
+  --sp-xs:  0.5rem;   /*  8px */
+  --sp-sm:  1rem;     /* 16px */
+  --sp-md:  2rem;     /* 32px */
+  --sp-lg:  4rem;     /* 64px */
+  --sp-xl:  7rem;     /* 112px */
+
+  /* ---- Layout ---- */
+  --container-max: 1200px;
+  --nav-height:    72px;
+  --radius:        12px;   /* global border-radius */
+
+  /* ---- Motion ---- */
+  --ease-out:       cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast:       180ms;
+  --dur-mid:        380ms;
+  --dur-slow:       650ms;
+}
