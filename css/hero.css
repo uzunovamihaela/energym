@@ -156,6 +156,6 @@
 
 /* ---- Responsive ---- */
 @media (max-width: 600px) {
-  .hero-title { font-size: clamp(2.8rem, 13vw, 5rem); }
+  .hero-title { font-size: clamp(2.2rem, 9vw, 3rem); }
   .hero-subtitle { font-size: 0.9rem; }
 }
