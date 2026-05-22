@@ -141,6 +141,7 @@
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
+  opacity: 0;
   pointer-events: none;
   transition: opacity var(--dur-mid) var(--ease-out);
 }
@@ -170,7 +171,7 @@
 .mobile-menu .mobile-close:hover { color: var(--clr-primary); }
 
 /* ---- Responsive breakpoints ---- */
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .nav-topbar  { display: none; }
   .nav-links   { display: none; }
   .nav-toggle  { display: flex; }
