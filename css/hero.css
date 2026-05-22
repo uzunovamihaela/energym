@@ -9,7 +9,7 @@
   align-items: flex-end;
   padding-bottom: var(--sp-lg);
   /* extra top padding to clear the two-row header (~108px total) */
-  padding-top: 112px;
+  padding-top: 80px;
   overflow: hidden;
 }
 
