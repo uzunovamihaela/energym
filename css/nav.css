@@ -141,7 +141,6 @@
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
-  opacity: 0;
   pointer-events: none;
   transition: opacity var(--dur-mid) var(--ease-out);
 }
