@@ -1,7 +1,12 @@
 /* =============================================================
-   ENERGYM — Navigation / Header
+   ENERGYM — Navigation
+   Breakpoints:
+     Mobile:  up to 600px   — logo left, hamburger right
+     Tablet:  601px–1024px  — logo left, hamburger right (larger spacing)
+     Desktop: 1025px+       — two-row header, topbar + full nav links
    ============================================================= */
 
+/* ---- Base: desktop two-row header ---- */
 .site-header {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -17,7 +22,7 @@
   border-bottom: 1px solid var(--clr-border);
 }
 
-/* ---- Top info bar (desktop only) ---- */
+/* ---- Top info bar ---- */
 .nav-topbar {
   width: 100%;
   border-bottom: 1px solid rgba(255,255,255,0.07);
@@ -31,7 +36,7 @@
   align-items: center;
   justify-content: flex-end;
   gap: 3rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: var(--clr-text-muted);
 }
 .nav-topbar-item {
@@ -52,30 +57,33 @@
   max-width: var(--container-max);
   margin-inline: auto;
   padding-inline: var(--sp-md);
-  padding-block: 1.1rem;
+  padding-block: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: var(--sp-md);
 }
 
+/* ---- Logo ---- */
 .nav-logo-img {
-  height: 48px;
+  height: 44px;
   width: auto;
   display: block;
 }
 
+/* ---- Desktop nav links ---- */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 3.5rem;
+  gap: 3rem;
 }
 .nav-links a {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--clr-text-muted);
   letter-spacing: 0.06em;
   position: relative;
+  white-space: nowrap;
   transition: color var(--dur-fast);
 }
 .nav-links a::after {
@@ -89,7 +97,7 @@
 .nav-links a:hover        { color: var(--clr-text); }
 .nav-links a:hover::after { width: 100%; }
 
-/* ---- Hamburger ---- */
+/* ---- Hamburger (hidden on desktop) ---- */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -125,10 +133,9 @@
   background: rgba(13, 13, 13, 0.97);
   z-index: 300;
   flex-direction: column;
-  align-items: flex-start;
-  padding-left: 36px;
-  justify-content: space-between;
-  padding-block: 4rem;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
   opacity: 0;
   pointer-events: none;
   transition: opacity var(--dur-mid) var(--ease-out);
@@ -139,19 +146,21 @@
 }
 .mobile-menu a {
   font-family: var(--font-display);
-  font-size: 1.2rem;
-  letter-spacing: 0.08em;
+  font-size: 3rem;
+  letter-spacing: 0.1em;
   color: var(--clr-text);
   transition: color var(--dur-fast);
 }
-.mobile-menu a:hover { color: var(--clr-primary); }
+.mobile-menu a:hover,
+.mobile-menu a:active { color: var(--clr-primary); }
 
 .mobile-close {
   position: absolute;
-  top: 1.5rem; right: 1.5rem;
+  top: 1.25rem; right: 1.25rem;
   width: 44px; height: 44px;
   display: flex; align-items: center; justify-content: center;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  line-height: 1;
   background: none;
   border: none;
   color: var(--clr-text-muted);
@@ -159,19 +168,14 @@
   -webkit-tap-highlight-color: transparent;
   transition: color var(--dur-fast);
 }
-.mobile-menu-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.85rem;
-}
-
-.mobile-close:hover { color: var(--clr-primary); }
+.mobile-close:hover,
+.mobile-close:active { color: var(--clr-primary); }
 
 /* ============================================================
-   MOBILE
+   TABLET — 601px to 1024px
+   Logo left, hamburger right, no topbar
    ============================================================ */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
 
   .nav-topbar { display: none; }
 
@@ -179,8 +183,8 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-inline: 1.25rem;
-    padding-block: 0.85rem;
+    padding-inline: 2rem;
+    padding-block: 1rem;
     background: rgba(13, 13, 13, 0.95);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -193,14 +197,25 @@
     flex: 0 0 auto;
   }
 
-  .nav-logo-img {
-    height: 52px;
-  }
+  .nav-logo-img { height: 44px; }
 
   .nav-links { display: none; }
 
-  .nav-toggle {
-    display: flex;
-    margin-left: auto;
+  .nav-toggle { display: flex; }
+}
+
+/* ============================================================
+   MOBILE — up to 600px
+   Tighter padding, slightly smaller logo
+   ============================================================ */
+@media (max-width: 600px) {
+
+  .site-header {
+    padding-inline: 1.25rem;
+    padding-block: 0.75rem;
   }
+
+  .nav-logo-img { height: 38px; }
+
+  .mobile-menu a { font-size: 2.5rem; }
 }
