@@ -118,7 +118,7 @@
 .nav-toggle.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
 /* ---- Mobile overlay menu ---- */
-.mobile-menu {
+/* .mobile-menu {
   display: none;
   position: fixed;
   inset: 0;
@@ -165,7 +165,47 @@
   gap: 2rem;
 }
 
-.mobile-close:hover { color: var(--clr-primary); }
+.mobile-close:hover { color: var(--clr-primary); } */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 13, 13, 0.97);
+  z-index: 300;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;  /* logo top, links bottom */
+  padding: 7rem 2rem 4rem;         /* top clears the ✕ button */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--dur-mid) var(--ease-out);
+}
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu-logo {
+  height: 48px;
+  width: auto;
+  opacity: 0.85;
+}
+
+.mobile-menu-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.mobile-menu-links a {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  letter-spacing: 0.08em;
+  color: var(--clr-text);
+  transition: color var(--dur-fast);
+}
+.mobile-menu-links a:hover { color: var(--clr-primary); }
 
 /* ============================================================
    MOBILE
