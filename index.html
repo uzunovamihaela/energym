@@ -39,10 +39,9 @@
        NAVIGATION HEADER
        ============================================================ -->
   
-  
-<header class="site-header" id="site-header">
+  <header class="site-header" id="site-header">
 
-  <!-- Row 1: info top bar (hidden on mobile) -->
+  <!-- Top info bar — desktop only, hidden on tablet/mobile -->
   <div class="nav-topbar">
     <div class="nav-topbar-inner">
 
@@ -70,36 +69,41 @@
     </div>
   </div>
 
-  <!-- Row 2: logo + desktop links (nav-inner does NOT contain the hamburger) -->
-  <nav class="nav-inner" aria-label="Main navigation">
-    <a href="index.html" aria-label="Energym home">
+  <!-- Main nav row: logo + desktop links -->
+  <div class="nav-main-row">
+
+    <!-- Logo — always visible, always left -->
+    <a href="index.html" class="nav-logo-link" aria-label="Energym home">
       <img src="assets/icons/logo.svg" alt="Energym logo" class="nav-logo-img" />
     </a>
-    <ul class="nav-links" role="list">
-      <li><a href="#hero">Начало</a></li>
-      <li><a href="#gallery">Галерия</a></li>
-      <li><a href="#contact">Контакти</a></li>
-    </ul>
-  </nav>
 
-  <!-- Hamburger: direct child of <header>, never hidden by nav rules -->
-  <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
+    <!-- Desktop links — hidden on tablet and mobile -->
+    <nav aria-label="Main navigation">
+      <ul class="nav-links" role="list">
+        <li><a href="#hero">Начало</a></li>
+        <li><a href="#gallery">Галерия</a></li>
+        <li><a href="#contact">Контакти</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hamburger — visible on tablet and mobile only -->
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </div>
 
 </header>
 
-<!-- Mobile overlay menu: lives outside <header> -->
+<!-- Mobile/tablet overlay menu -->
 <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
   <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
   <a href="#hero">Начало</a>
   <a href="#gallery">Галерия</a>
   <a href="#contact">Контакти</a>
 </nav>
-
-</header>
 
 
 
