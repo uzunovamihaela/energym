@@ -155,7 +155,7 @@
 }
 
 /* ---- Responsive ---- */
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
   .hero-title { font-size: clamp(2rem, 7vw, 2rem); }
   .hero-subtitle { font-size: 0.9rem; }
   .hero-social { font-size: 0.7rem; }
