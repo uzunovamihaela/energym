@@ -163,7 +163,7 @@
 
 @media (max-width: 1024px) {
   /* Responsive tablet */
-.hero-title { font-size: clamp(3rem, 9vw, 4rem); }
-.hero-subtitle { font-size: 1rem; }
-.hero-social { font-size: 1rem; }
+.hero-title { font-size: clamp(5rem, 10vw, 6rem); }
+.hero-subtitle { font-size: 2rem; }
+.hero-social { font-size: 2rem; }
   }
