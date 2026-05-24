@@ -155,8 +155,15 @@
 }
 
 /* ---- Responsive ---- */
-@media (max-width: 1000px) {
+@media (max-width: 600px) {
   .hero-title { font-size: clamp(2rem, 7vw, 2rem); }
   .hero-subtitle { font-size: 0.9rem; }
   .hero-social { font-size: 0.7rem; }
 }
+
+@media (max-width: 1024px) {
+  /* Responsive tablet */
+.hero-title { font-size: clamp(3rem, 9vw, 4rem); }
+.hero-subtitle { font-size: 1rem; }
+.hero-social { font-size: 1rem; }
+  }
