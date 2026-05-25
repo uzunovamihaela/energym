@@ -23,6 +23,7 @@
 /* ---- Individual card ---- */
 .pricing-card {
   position: relative;
+  height: 100%;
   background: var(--clr-surface);
   border: 1px solid var(--clr-border);
   border-radius: var(--radius);
