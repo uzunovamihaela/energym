@@ -170,6 +170,14 @@
   margin-bottom: var(--sp-sm);
 }
 
+.policy-section {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--sp-md);
+  padding-block: var(--sp-xl);
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 1024px) {
   .facilities-layout {
