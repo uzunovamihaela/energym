@@ -80,8 +80,8 @@
   line-height: 1;
 }
 .pricing-currency {
-  font-size: 1.5rem;
-  font-weight: 300;
+  font-size: 1.75rem;
+  font-weight: 500;
   color: var(--clr-text-muted);
   align-self: flex-start;
   padding-top: 0.6rem;
