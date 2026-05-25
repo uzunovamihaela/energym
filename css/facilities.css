@@ -95,13 +95,13 @@
   background-image: url('https://framerusercontent.com/images/Cs6ChWquCLMlZaReZ0uIVclyI.jpg');
 }
 .gallery-slide:nth-child(4) {
-  background-image: url('uzunovamihaela/energym/assets/images/Energym-cardio 2.jpg');
+  background-image: url('assets/images/Energym-cardio 2.jpg');
 }
 .gallery-slide:nth-child(5) {
-  background-image: url('uzunovamihaela/energym/assets/images/Energym-cardio.jpg');
+  background-image: url('assets/images/Energym-cardio.jpg');
 }
 .gallery-slide:nth-child(6) {
-  background-image: url('uzunovamihaela/energym/assets/images/Energym-core.jpg');
+  background-image: url('assets/images/Energym-core.jpg');
 }
 
 /* ---- Replace with local images:
