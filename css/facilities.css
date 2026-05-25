@@ -95,7 +95,7 @@
   background-image: url('https://framerusercontent.com/images/Cs6ChWquCLMlZaReZ0uIVclyI.jpg');
 }
 .gallery-slide:nth-child(4) {
-  background-image: src="assets/images/Energym-bench.jpg";
+  background-image: url('assets/images/Energym-bench.jpg');
 }
 .gallery-slide:nth-child(5) {
   background-image: url('https://framerusercontent.com/images/Cs6ChWquCLMlZaReZ0uIVclyI.jpg');
