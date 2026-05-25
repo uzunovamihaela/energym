@@ -159,6 +159,17 @@
   transform: scale(1.35);
 }
 
+.policy-text{
+  display: block;
+  font-family: var(--font-body);
+  font-size: 2rem;    
+  font-weight: 700;
+  letter-spacing: 0.16rem;
+  text-transform: uppercase;
+  color: var(--clr-primary);
+  margin-bottom: var(--sp-sm);
+}
+
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
   .facilities-layout {
@@ -170,7 +181,7 @@
 .policy-section {
   width: 100%;
   max-width: var(--container-max);
-  font-size: 2rem;
+  font-size: 1.25rem;
   margin-inline: auto;
   padding-inline: var(--sp-md);
   padding-block: var(--sp-xl);
@@ -178,7 +189,7 @@
 .policy-text{
   display: block;
   font-family: var(--font-body);
-  font-size: 2rem;     /* WAS "1 rem" with a space — invalid CSS */
+  font-size: 1.25rem;    
   font-weight: 700;
   letter-spacing: 0.16rem;
   text-transform: uppercase;
