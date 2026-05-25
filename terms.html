@@ -10,6 +10,7 @@
   <meta property="og:title"       content="Energym – feel the change" />
   <meta property="og:description" content="Energym е фитнес център в град Хасково." />
   <meta property="og:type"        content="website" />
+  <meta property="og:image"       content="assets/images/gym person background.avif" />
 
   <!-- Favicon (teal version for browser tab) -->
   <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
@@ -33,78 +34,76 @@
 </head>
 
 <body>
+
   <!-- ============================================================
        NAVIGATION HEADER
        ============================================================ -->
+  
   <header class="site-header" id="site-header">
 
-    <!-- Row 1: info top bar -->
-    <div class="nav-topbar">
-      <div class="nav-topbar-inner">
+  <!-- Top info bar — desktop only, hidden on tablet/mobile -->
+  <div class="nav-topbar">
+    <div class="nav-topbar-inner">
 
-        <!-- Hours -->
-        <div class="nav-topbar-item">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
-          </svg>
-          <span>08:00ч. – 22:00ч. (Понеделник – Петък),&nbsp; 10:00ч. – 20:00ч. (Събота – Неделя)</span>
-        </div>
-
-        <!-- Phone -->
-        <div class="nav-topbar-item">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-          </svg>
-          <a href="tel:+359885232670">+359 88 523 2670</a>
-        </div>
-
-        <!-- Email -->
-        <div class="nav-topbar-item">
-          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-          </svg>
-          <a href="mailto:contact@energym.bg">contact</a>
-        </div>
-
+      <div class="nav-topbar-item">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
+        </svg>
+        <span>08:00ч. – 22:00ч. (Понеделник – Петък),&nbsp; 10:00ч. – 20:00ч. (Събота – Неделя)</span>
       </div>
+
+      <div class="nav-topbar-item">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+        <a href="tel:+359885232670">+359 88 523 2670</a>
+      </div>
+
+      <div class="nav-topbar-item">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+        <a href="mailto:contact@energym.bg">contact</a>
+      </div>
+
     </div>
+  </div>
 
-    <!-- Row 2: logo + nav links -->
-    <nav class="nav-inner" aria-label="Main navigation">
+  <!-- Main nav row: logo + desktop links -->
+  <div class="nav-main-row">
 
-      <!-- Logo -->
-      <a href="index.html" aria-label="Energym home">
-        <img
-          src="assets/icons/logo.svg"
-          alt="Energym logo"
-          class="nav-logo-img"
-        />
-      </a>
+    <!-- Logo — always visible, always left -->
+    <a href="index.html" class="nav-logo-link" aria-label="Energym home">
+      <img src="assets/icons/logo.svg" alt="Energym logo" class="nav-logo-img" />
+    </a>
 
-      <!-- Desktop links (wide spacing) -->
+    <!-- Desktop links — hidden on tablet and mobile -->
+    <nav aria-label="Main navigation">
       <ul class="nav-links" role="list">
-        <li><a href="a#hero">Начало</a></li>
+        <li><a href="#hero">Начало</a></li>
         <li><a href="#gallery">Галерия</a></li>
         <li><a href="#contact">Контакти</a></li>
       </ul>
-
-      <!-- Hamburger (mobile only) -->
-      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </nav>
 
-  </header>
+    <!-- Hamburger — visible on tablet and mobile only -->
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-  <!-- Mobile overlay menu -->
-  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
-    <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
-    <a href="index.html#hero">Начало</a>
-    <a href="index.html#gallery">Галерия</a>
-    <a href="index.html#contact">Контакти</a>
-  </nav>
+  </div>
+
+</header>
+
+<!-- Mobile/tablet overlay menu -->
+<nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation">
+  <button class="mobile-close" id="mobile-close" aria-label="Close menu">✕</button>
+  <a href="#hero">Начало</a>
+  <a href="#gallery">Галерия</a>
+  <a href="#contact">Контакти</a>
+</nav>
 
 <!-- ============================================================
        POLICY / ABOUT
