@@ -176,7 +176,6 @@
     grid-template-columns: 1fr;
     gap: 3rem;
   }
-}
 
 .policy-section {
   width: 100%;
@@ -197,4 +196,5 @@
   margin-bottom: var(--sp-sm);
 }
 
+}
   
