@@ -185,6 +185,7 @@
   padding-inline: var(--sp-md);
   padding-block: var(--sp-xl);
 }
+
 .policy-text{
   display: block;
   font-family: var(--font-body);
