@@ -93,7 +93,7 @@
 }
 
 .gallery-slide:nth-child(3) {
-  background-image: url('../assets/images/Energym-bench.jpg');
+  background-image: url('../assets/images/machines\ layout.jpg');
 }
 
 .gallery-slide:nth-child(4) {
@@ -103,7 +103,7 @@
   background-image: url('../assets/images/Energym-spaces.jpg');
 }
 .gallery-slide:nth-child(6) {
-  background-image: url('../assets/images/Energym-core.jpg');
+  background-image: url('../assets/images/leg\ curl.jpg');
 }
 .gallery-slide:nth-child(7) {
   background-image: url('../assets/images/Energym-cardio.jpg');
@@ -113,6 +113,12 @@
 }
 .gallery-slide:nth-child(9) {
   background-image: url('../assets/images/Energym-weights.jpg');
+}
+.gallery-slide:nth-child(10) {
+  background-image: url('../assets/images/machines\ for\ upper\ body.jpg');
+}
+.gallery-slide:nth-child(11) {
+  background-image: url('../assets/images/back\ and\ upper.jpg');
 }
 
 /* ---- Replace with local images:
