@@ -86,16 +86,18 @@
   flex-shrink: 0;
 }
 .gallery-slide:nth-child(1) {
-  background-image: url('https://framerusercontent.com/images/imcVa9gFIQIkK0mpX6resYrD0.jpg');
+  background-image: url('../assets/images/Energym-machines.jpg');
 }
 .gallery-slide:nth-child(2) {
-  background-image: url('https://framerusercontent.com/images/4ImcSU60M7zOXLLQpVuWPXVw5dY.jpg');
+  background-image: url('../assets/images/Energym-cardio\ 2.jpg'); 
 }
+
 .gallery-slide:nth-child(3) {
-  background-image: url('https://framerusercontent.com/images/Cs6ChWquCLMlZaReZ0uIVclyI.jpg');
+  background-image: url('../assets/images/Energym-bench.jpg');
 }
+
 .gallery-slide:nth-child(4) {
-  background-image: url('../assets/images/Energym-machines 2.jpg');
+  background-image: url('../assets/images/Energym-machines\ 2.jpg');
 }
 .gallery-slide:nth-child(5) {
   background-image: url('../assets/images/Energym-spaces.jpg');
