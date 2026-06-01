@@ -32,11 +32,10 @@ img, svg {
   max-width: 100%;
 }
 
-ul, ol, {
+ul, ol {
   list-style: none;
   margin: 0;
   padding: 0;
-
 }
 
 li {
