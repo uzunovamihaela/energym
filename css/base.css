@@ -39,7 +39,7 @@ ul, ol {
 }
 
 .li-policy {
-  list-style-type:circle;
+  list-style-type:disc;
   margin: 0;
   padding-left: 16px;
 }
